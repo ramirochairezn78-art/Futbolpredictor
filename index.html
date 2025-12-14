@@ -1,11 +1,56 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Pronosticador de Fútbol</title>
+  <meta charset="UTF-8" />
+  <title>⚽ Predictor de Fútbol</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- React -->
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+
+  <!-- Babel para JSX -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Recharts -->
+  <script src="https://unpkg.com/recharts/umd/Recharts.min.js"></script>
 </head>
-<body>
-  <h1>⚽ Pronosticador de Fútbol</h1>
-  <p>El proyecto ya está en línea.</p>
+
+<body class="bg-slate-900 text-slate-100">
+  <div id="root"></div>
+
+  <script type="text/babel">
+
+    /**************************************************
+     * AQUÍ VA TODO EL CÓDIGO DEL PREDICTOR
+     * Desde:
+     *   function PredictorFutbol() { ... }
+     * Hasta el final del componente
+     **************************************************/
+
+    // EJEMPLO BASE (NO ES EL FINAL)
+    function PredictorFutbol() {
+      return (
+        <div className="min-h-screen flex items-center justify-center">
+          <div className="bg-slate-800 p-6 rounded-xl shadow-xl max-w-md text-center">
+            <h1 className="text-2xl font-bold text-sky-400 mb-4">
+              ⚽ Predictor de Fútbol
+            </h1>
+            <p className="opacity-80">
+              Modelo cargado.  
+              La estadística está rezando.
+            </p>
+          </div>
+        </div>
+      );
+    }
+
+    const root = ReactDOM.createRoot(document.getElementById("root"));
+    root.render(<PredictorFutbol />);
+
+  </script>
 </body>
 </html>
